@@ -35,6 +35,8 @@ AIS::AIS(QSqlQuery* menuQuery)
 	}
 
 	Data.SomeData = 10;
+
+	ui->statusBar->UpdateData(Data);
 }
 
 AIS::~AIS()

@@ -51,7 +51,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
+ FILEVERSION 1,0,0,3
  PRODUCTVERSION 1,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -69,9 +69,9 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Georgy Gogol"
             VALUE "FileDescription", "Тестовый АИС"
-            VALUE "FileVersion", "1.0.0.1"
+            VALUE "FileVersion", "1.0.0.3"
             VALUE "InternalName", "AIS.exe"
-            VALUE "LegalCopyright", "Copyright (C) 2023"
+            VALUE "LegalCopyright", "Georgy Gogol Copyright (C) 2023"
             VALUE "OriginalFilename", "AIS.exe"
             VALUE "ProductName", "Тестовый АИС"
             VALUE "ProductVersion", "1.0.0.0"

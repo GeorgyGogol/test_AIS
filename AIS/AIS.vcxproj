@@ -107,10 +107,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classes\AisMenuAction.cpp" />
+    <ClCompile Include="classes\StatusBarOnAIS.cpp" />
     <ClCompile Include="forms\AIS.cpp" />
     <ClCompile Include="main.cpp" />
     <QtMoc Include="forms\AIS.h" />
     <QtMoc Include="classes\AisMenuAction.h" />
+    <QtMoc Include="classes\StatusBarOnAIS.h" />
     <ClInclude Include="res\resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClCompile Include="stdafx.cpp">

@@ -1,3 +1,6 @@
 Debug
 /.vs
 *.user
+Release
+/AIS/res/*.aps
+/Setup/setup.exe

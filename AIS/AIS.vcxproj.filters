@@ -45,12 +45,18 @@
     <ClCompile Include="classes\AisMenuAction.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="classes\StatusBarOnAIS.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="forms\AIS.h">
       <Filter>Forms</Filter>
     </QtMoc>
     <QtMoc Include="classes\AisMenuAction.h">
+      <Filter>Classes</Filter>
+    </QtMoc>
+    <QtMoc Include="classes\StatusBarOnAIS.h">
       <Filter>Classes</Filter>
     </QtMoc>
   </ItemGroup>

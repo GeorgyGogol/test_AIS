@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLib", "TestLib\TestLib.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeneralLib", "GeneralLib\GeneralLib.vcxproj", "{EC78BF29-D033-44A4-8B5E-85D9044E15B6}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_test_AIS", "Setup\SetupAIS.vdproj", "{958491A8-57CA-44B8-9443-315938A52793}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -30,6 +32,8 @@ Global
 		{EC78BF29-D033-44A4-8B5E-85D9044E15B6}.Debug|x86.Build.0 = Debug|Win32
 		{EC78BF29-D033-44A4-8B5E-85D9044E15B6}.Release|x86.ActiveCfg = Release|Win32
 		{EC78BF29-D033-44A4-8B5E-85D9044E15B6}.Release|x86.Build.0 = Release|Win32
+		{958491A8-57CA-44B8-9443-315938A52793}.Debug|x86.ActiveCfg = Debug
+		{958491A8-57CA-44B8-9443-315938A52793}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

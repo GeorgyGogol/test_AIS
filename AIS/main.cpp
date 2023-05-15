@@ -7,11 +7,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-	QFile dataBaseFile(":/AIS/MenuMap");
-	dataBaseFile.copy("MenuMap");
+	QTemporaryDir tmpDir;
+	tmpDir.setAutoRemove(true);
+	QString dbPath = tmpDir.path() + "/MenuMap";
+	QFile dataBaseResource(":/AIS/MenuMap");
+	dataBaseResource.copy(dbPath);
 
 	QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "MainConn");
-	db.setDatabaseName("MenuMap");
+	db.setDatabaseName(dbPath);
 	if (!db.open()) {
 		DBG_PRINT(db.lastError().text());
 		QMessageBox::critical(nullptr, QString::fromLocal8Bit("Ошибка ресурсов!"), QString::fromLocal8Bit("Файл конфигурации не загружен!"));
