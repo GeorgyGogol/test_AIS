@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/AIS">
+        <file alias="About">ais_about.txt</file>
+        <file alias="MenuMap">MenuMap.db</file>
+    </qresource>
+</RCC>
