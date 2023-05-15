@@ -17,6 +17,6 @@ AisMenuAction::~AisMenuAction()
 
 void AisMenuAction::emitCall()
 {
-	emit call(ModuleName, Function);
+	emit call(ModuleName.toStdString().c_str(), Function.toStdString().c_str());
 }
 

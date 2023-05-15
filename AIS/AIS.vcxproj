@@ -55,12 +55,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)forms;$(ProjectDir)classes;$(ProjectDir)res;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)forms;$(ProjectDir)classes;$(ProjectDir)res;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>$(Qt_DEFINES_);%(PreprocessorDefinitions);DEBUG</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Temp\2\test_AIS\GeneralLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Temp\2\test_AIS\GeneralLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
@@ -98,13 +106,12 @@
     </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="AIS.qrc" />
-    <QtUic Include="AIS.ui" />
-    <QtMoc Include="AIS.h" />
-    <ClCompile Include="AIS.cpp" />
-    <ClCompile Include="AisMenuAction.cpp" />
+    <ClCompile Include="classes\AisMenuAction.cpp" />
+    <ClCompile Include="forms\AIS.cpp" />
     <ClCompile Include="main.cpp" />
-    <QtMoc Include="AisMenuAction.h" />
+    <QtMoc Include="forms\AIS.h" />
+    <QtMoc Include="classes\AisMenuAction.h" />
+    <ClInclude Include="res\resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">Create</PrecompiledHeader>
@@ -112,10 +119,18 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MenuMap.db" />
+    <ProjectReference Include="..\GeneralLib\GeneralLib.vcxproj">
+      <Project>{ec78bf29-d033-44a4-8b5e-85d9044e15b6}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ais_about.txt" />
+    <QtUic Include="forms\AIS.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="res\AIS.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\WinRes.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

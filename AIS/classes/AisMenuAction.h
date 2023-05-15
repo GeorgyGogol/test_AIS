@@ -16,7 +16,7 @@ private:
 
 public:
 signals:
-	void call(const QString& moduleName, const QString& function);
+	void call(const char* moduleName, const char* function);
 
 public slots:
 	void emitCall();

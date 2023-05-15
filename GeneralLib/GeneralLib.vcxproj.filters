@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{2bb3ee95-8d2b-4d34-9478-809c7c87f552}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="generallib_global.h">
@@ -39,7 +42,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClInclude Include="include\DataStruct.h">
-      <Filter>Header Files</Filter>
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeneralTypes.h">
+      <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

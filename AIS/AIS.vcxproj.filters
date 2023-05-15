@@ -13,52 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
-    </Filter>
     <Filter Include="Translation Files">
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{fcd9643c-4dd7-4065-af63-9de45477e919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{985147ce-309d-47c5-8061-d05922bed579}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="AIS.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-    <QtUic Include="AIS.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtMoc Include="AIS.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="AIS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClInclude Include="res\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AisMenuAction.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="forms\AIS.cpp">
+      <Filter>Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\AisMenuAction.cpp">
+      <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="AisMenuAction.h">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="forms\AIS.h">
+      <Filter>Forms</Filter>
+    </QtMoc>
+    <QtMoc Include="classes\AisMenuAction.h">
+      <Filter>Classes</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MenuMap.db" />
+    <QtUic Include="forms\AIS.ui">
+      <Filter>Forms</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ais_about.txt" />
+    <QtRcc Include="res\AIS.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\WinRes.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

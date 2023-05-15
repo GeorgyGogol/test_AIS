@@ -26,17 +26,13 @@
     <property name="title">
      <string>Программа</string>
     </property>
-    <addaction name="action_About"/>
-    <addaction name="action_Exit"/>
     <addaction name="action"/>
-   </widget>
-   <widget class="QMenu" name="menu_Utilities">
-    <property name="title">
-     <string>Утилиты</string>
-    </property>
+    <addaction name="separator"/>
+    <addaction name="action_About"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
    </widget>
    <addaction name="menu_Programma"/>
-   <addaction name="menu_Utilities"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Exit">
@@ -60,7 +56,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="AIS.qrc"/>
+  <include location="../res/AIS.qrc"/>
  </resources>
  <connections>
   <connection>

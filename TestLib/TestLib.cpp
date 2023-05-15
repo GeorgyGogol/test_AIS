@@ -1,11 +1,12 @@
 #include "stdafx.h"
 #include "TestLib.h"
 
-TestLib::TestLib()
+TestLib::TestLib(const our::ProgrammData& data) :
+	CallerData(data)
 {
 }
 
 void TestLib::ShowTestForm()
 {
-	QMessageBox::information(this, "title", "call some form (dll)");
+	QMessageBox::information(nullptr, "title", "call some form (dll)");
 }

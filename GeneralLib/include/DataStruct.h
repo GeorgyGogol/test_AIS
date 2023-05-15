@@ -1,6 +1,10 @@
 #pragma once
 
-struct ProgrammData
-{
-	int SomeData;
-};
+namespace our {
+
+	struct ProgrammData
+	{
+		int SomeData;
+	};
+
+}
