@@ -62,13 +62,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>$(Qt_DEFINES_);%(PreprocessorDefinitions);DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Temp\2\test_AIS\GeneralLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>$(Qt_DEFINES_);%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories); $(SolutionDir)GeneralLib\include; $(SolutionDir)GeneralForms\include</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Temp\2\test_AIS\GeneralLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories); $(SolutionDir)GeneralLib\include; $(SolutionDir)GeneralForms\include</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
@@ -107,12 +107,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classes\AisMenuAction.cpp" />
+    <ClCompile Include="classes\AppSettings.cpp" />
     <ClCompile Include="classes\StatusBarOnAIS.cpp" />
     <ClCompile Include="forms\AIS.cpp" />
     <ClCompile Include="main.cpp" />
     <QtMoc Include="forms\AIS.h" />
     <QtMoc Include="classes\AisMenuAction.h" />
     <QtMoc Include="classes\StatusBarOnAIS.h" />
+    <ClInclude Include="classes\AppSettings.h" />
     <ClInclude Include="res\resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClCompile Include="stdafx.cpp">
@@ -121,6 +123,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GeneralForms\GeneralForms.vcxproj">
+      <Project>{0679ce2e-9b25-4094-b19f-8ebb4965154a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\GeneralLib\GeneralLib.vcxproj">
       <Project>{ec78bf29-d033-44a4-8b5e-85d9044e15b6}</Project>
     </ProjectReference>

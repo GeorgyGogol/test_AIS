@@ -1,7 +1,11 @@
 #pragma once
 
-#include <QStatusBar>
-#include "DataStruct.h"
+#include "ProgrammData.h"
+
+QT_BEGIN_NAMESPACE
+class QWidget;
+class QStatusBar;
+QT_END_NAMESPACE
 
 class StatusBarOnAIS  : public QStatusBar
 {
@@ -10,9 +14,6 @@ class StatusBarOnAIS  : public QStatusBar
 public:
 	StatusBarOnAIS(QWidget *parent);
 	~StatusBarOnAIS();
-
-private:
-	//void FillWidgets(cosnt String)
 
 public slots:
 	void UpdateData(const our::ProgrammData& data);

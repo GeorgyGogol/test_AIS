@@ -1,8 +1,7 @@
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "StatusBarOnAIS.h"
+#include <QStatusBar>
 #include <QLabel>
-#include <QSizePolicy>
-
 
 StatusBarOnAIS::StatusBarOnAIS(QWidget *parent)
 	: QStatusBar(parent)
@@ -27,8 +26,15 @@ void StatusBarOnAIS::UpdateData(const our::ProgrammData& data)
 	QLabel* object;
 
 	object = static_cast<QLabel*>(objects[1]);
-	object->setText(QString::fromLocal8Bit("Что-то: ") + QString::number(data.SomeData));
+	object->setText(QString("Что-то: ") + QString::number(data.SomeData));
 
 	object = static_cast<QLabel*>(objects[2]);
-	object->setText(QString::fromLocal8Bit("Сервер: Не определен") /* + QString::number(data.SomeData)*/ );
+	QString serverText = "Сервер: ";
+	if (QSqlDatabase::contains("MainConn")) {
+		serverText += QSqlDatabase::database("MainConn").databaseName();
+	}
+	else {
+		serverText += "Не определен";
+	}
+	object->setText(serverText);
 }

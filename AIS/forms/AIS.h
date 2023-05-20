@@ -2,7 +2,7 @@
 
 #include <QtWidgets/QWidget>
 #include "ui_AIS.h"
-#include "DataStruct.h"
+#include "ProgrammData.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class AISClass; };
@@ -13,7 +13,7 @@ class AIS : public QMainWindow
     Q_OBJECT
 
 public:
-	AIS(QSqlQuery* menu);
+	AIS(QSqlQuery* menu, const our::ProgrammData& inputData = our::ProgrammData());
     ~AIS();
 
 private:

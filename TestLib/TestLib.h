@@ -1,7 +1,7 @@
 #pragma once
 
 #include "testlib_global.h"
-#include "DataStruct.h"
+#include "ProgrammData.h"
 
 class TESTLIB_EXPORT TestLib
 {

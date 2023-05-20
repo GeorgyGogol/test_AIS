@@ -8,5 +8,6 @@ TestLib::TestLib(const our::ProgrammData& data) :
 
 void TestLib::ShowTestForm()
 {
-	QMessageBox::information(nullptr, "title", "call some form (dll)");
+	QMessageBox::information(nullptr, "title", CallerData.Additional);
+
 }

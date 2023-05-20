@@ -13,40 +13,46 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
     <Filter Include="Translation Files">
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
     <Filter Include="pch">
-      <UniqueIdentifier>{f136d962-00cb-46b5-a003-809df822d280}</UniqueIdentifier>
+      <UniqueIdentifier>{c7d654b0-a6a7-416a-bb40-4d1a6245bd72}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Include">
-      <UniqueIdentifier>{2bb3ee95-8d2b-4d34-9478-809c7c87f552}</UniqueIdentifier>
+    <Filter Include="Form Files\Login">
+      <UniqueIdentifier>{d1b5f8c1-be8c-4822-94ac-a7e1688b9612}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>pch</Filter>
     </ClInclude>
-    <ClInclude Include="include\GeneralTypes.h">
-      <Filter>Header Files\Include</Filter>
+    <ClInclude Include="include\GeneralForms.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\GeneralLib.h">
-      <Filter>Header Files\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\generallib_global.h">
-      <Filter>Header Files\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ProgrammData.h">
-      <Filter>Header Files\Include</Filter>
+    <ClInclude Include="include\generalforms_global.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>pch</Filter>
     </ClCompile>
-    <ClCompile Include="src\GeneralLib.cpp">
+    <ClCompile Include="src\GeneralForms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Forms\Login\Login.cpp">
+      <Filter>Form Files\Login</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\Login.h">
+      <Filter>Form Files\Login</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
